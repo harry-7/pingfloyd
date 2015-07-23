@@ -1,0 +1,211 @@
+/*
+Theme Name: Ping Floyd
+Theme URI: http://ping.iiit.ac.in
+Author: Mrinal Dhar
+Author URI: http://mrinaldhar.com
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: ping
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*body { text-align: center; }
+#wrapper { display: block; border: 1px #a2a2a2 solid; width:90%; margin:0px auto; }
+#header { border: 2px #a2a2a2 solid; }
+#content { width: 75%; border: 2px #a2a2a2 solid; float: left; }
+#sidebar { width: 23%; border: 2px #a2a2a2 solid; float: right; }
+#delimiter { clear: both; }
+#footer { border: 2px #a2a2a2 solid; }
+.title { font-size: 11pt; font-family: verdana; font-weight: bold; }*/
+@font-face {
+	font-family: myriadl;
+	src: url("fonts/myriadl.otf");  
+}
+@font-face {
+	font-family: exo;
+	src: url("fonts/exo.otf");
+}
+@font-face {
+	font-family: freight;
+	src: url("fonts/freight.ttf");
+}
+@font-face {
+	font-family: colab;
+	src: url("fonts/roboto2.ttf");
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/material.woff'); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('./fonts/material.woff'); format('woff'),
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+body {
+	font-family: myriadl;
+}
+#header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.9);
+	color: white;
+	box-shadow: 0 0 2px black;
+	font-family: exo;
+	border-bottom: 2px solid rgba(255,255,255,1);
+
+}
+#header table tr td {
+	color: rgba(255,255,255,0.9);
+	/*border: 0px;*/
+	text-align: center;
+}
+#herobar {
+	border-collapse: collapse;
+	/*border: 0px;*/
+	
+
+}
+#herobar tr td {
+	margin: 0px;
+
+}
+#navbar tr td{
+	height: 100%;
+padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 0.7em;
+	font-family: exo;
+	margin: 0px;
+	/*border: 0px;*/
+
+}
+#navbar {
+	border: 0px;
+
+	border-collapse: collapse;
+	text-transform: uppercase;
+}
+#navbar tr td:hover {
+	background-color: rgba(255,255,255,1);
+	color: black;
+	cursor: pointer;
+}
+.anim {
+		-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+#searchbar {
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 100px;
+}
+#searchvalue {
+	width: 90%;
+	border: 0px;
+	background-color: transparent;
+	outline-width: 0px;
+	color: rgba(255,255,255,0.9);
+	font-family: exo;
+	font-size: 0.9em;
+}
+#main {
+	position: absolute;
+	top: 100px;
+	/*left: 10%;*/
+	height: 100%;
+	width: 100%;
+}
+#footer {
+	position: fixed;
+	bottom: 0px;
+}
+#searchicon {
+	padding-left: 5px;
+}
+#logo_hero {
+	font-size: 2em;
+	/*margin-left: 50px;*/
+}	
+.post_title {
+	font-family: colab;
+	font-weight: normal;
+	font-size: 2.5em;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
+.post_time {
+	font-family: colab;
+	font-weight: normal;
+	font-size: 1em;
+	color: rgba(0,0,0,0.5);
+	/*text-transform: uppercase;*/
+	margin-top: 0px;
+	margin-bottom: 50px;
+}
+#content p {
+	font-family: freight;
+	font-size: 1.1em;
+	text-align: justify;
+	/*width: 100%;*/
+	 /*See if you can change letter height*/
+	/*text-decoration: italics;*/
+	font-smoothing: antialiased;
+}
+#content hr {
+	outline-width: 0px;
+	border: 1px solid black;
+	margin-top: 50px;
+}
+#content {
+	position: absolute;
+	width: 50%;
+	left: 10%;
+}
+#sidebar {
+	position: fixed;
+	right: 0%;
+	width: 30%;
+	/*border-left: 1px solid black;*/
+	height: 100%;
+}
+#sidebar h2 {
+	font-weight: normal;
+	font-size: 1.5em;
+}
+/*#navbar tr td {*/
+
+/*}*/
