@@ -92,25 +92,7 @@ a {
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/smooth.min.js"></script>
 <script>
-$(document).keypress(function(e) {
-	if (e.which == 13) {
-		alert('hi');
-		// window.location.href="home.php";
-	}
-})
-var flag = 0;
-window.setInterval(function() {
-	if (flag ==0) {
-$('#dis').animate({opacity: 0}, 300);
 
-		flag = 1;
-	}
-	else {
-$('#dis').animate({opacity: 1}, 300);
-
-		flag = 0;
-	}
-}, 800);
 
 </script>
 </html>

@@ -88,7 +88,7 @@ body {
 	font-family: exo;
 	/*border-bottom: 3px solid #9CCC65;*/
 	border-bottom: 3px solid rgba(255,255,255,0.9);
-
+	z-index: 999;
 
 }
 #header table tr td {
@@ -197,10 +197,11 @@ padding-top: 15px;
 	font-weight: normal;
 	font-size: 1.2em;
 }
-#content hr {
+hr {
 	outline-width: 0px;
 	border: 1px solid black;
-	margin-top: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 #content {
 	position: absolute;
@@ -229,6 +230,69 @@ a {
 	font-size: 3em;
 	text-transform: uppercase;
 	font-family: gotham;
+}
+#sidebar .sidebar_title {
+	font-family: gotham;
+	font-size: 1.3em;
+}
+.tags_area {
+	width: 100%;
+	list-style-type: none;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+}
+#sidebar .tags_area {
+
+}
+.tag {
+	display: inline-block;
+	padding: 7px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin: 5px;
+	font-family: exo;
+	font-size: 0.8em;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+.tag:hover {
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+#popular_articles_area {
+width: 100%;
+	list-style-type: none;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	overflow-y: scroll;
+	height: 100%;
+}
+#popular_articles_area .article {
+	width: 100%;
+	padding: 10px;
+}
+#popular_articles_area .article .article_title{
+	display: block;
+	font-family: exo;
+
+}
+#popular_articles_area .article .article_desc {
+	display: block;
+	font-family: exo;
+	font-size: 0.7em;
+
+}
+#popular_articles_area .article:hover {
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+#sidebar hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 /*#navbar tr td {*/
 
