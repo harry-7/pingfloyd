@@ -26,6 +26,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	src: url("fonts/myriadl.otf");  
 }
 @font-face {
+	font-family: gotham;
+	src: url("fonts/gotham.ttf");  
+}
+@font-face {
 	font-family: exo;
 	src: url("fonts/exo.otf");
 }
@@ -82,7 +86,9 @@ body {
 	color: white;
 	box-shadow: 0 0 2px black;
 	font-family: exo;
-	border-bottom: 2px solid rgba(255,255,255,1);
+	/*border-bottom: 3px solid #9CCC65;*/
+	border-bottom: 3px solid rgba(255,255,255,0.9);
+
 
 }
 #header table tr td {
@@ -130,7 +136,7 @@ padding-top: 15px;
   transition:.5s;
 }
 #searchbar {
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0.15);
 	border-radius: 100px;
 }
 #searchvalue {
@@ -161,16 +167,17 @@ padding-top: 15px;
 	/*margin-left: 50px;*/
 }	
 .post_title {
-	font-family: colab;
+	font-family: gotham;
 	font-weight: normal;
-	font-size: 2.5em;
+	text-transform: uppercase;
+	font-size: 3.0em;
 	padding-bottom: 0px;
 	margin-bottom: 10px;
 }
 .post_time {
-	font-family: colab;
+	font-family: gotham;
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: rgba(0,0,0,0.5);
 	/*text-transform: uppercase;*/
 	margin-top: 0px;
@@ -178,12 +185,17 @@ padding-top: 15px;
 }
 #content p {
 	font-family: freight;
-	font-size: 1.1em;
+	font-size: 1.2em;
+	line-height: 1.4em;
 	text-align: justify;
 	/*width: 100%;*/
 	 /*See if you can change letter height*/
 	/*text-decoration: italics;*/
-	font-smoothing: antialiased;
+	/*font-smoothing: antialiased;*/
+}
+#content p strong {
+	font-weight: normal;
+	font-size: 1.2em;
 }
 #content hr {
 	outline-width: 0px;
@@ -192,19 +204,31 @@ padding-top: 15px;
 }
 #content {
 	position: absolute;
-	width: 50%;
+	width: 55%;
 	left: 10%;
 }
 #sidebar {
 	position: fixed;
 	right: 0%;
-	width: 30%;
+	width: 25%;
 	/*border-left: 1px solid black;*/
 	height: 100%;
 }
 #sidebar h2 {
 	font-weight: normal;
 	font-size: 1.5em;
+}
+a {
+	text-decoration: none;
+}
+#header a {
+	color: rgba(255,255,255,0.9);
+
+}
+#page_title {
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: gotham;
 }
 /*#navbar tr td {*/
 
