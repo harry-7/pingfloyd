@@ -31,7 +31,7 @@ foreach( $latest_post as $post ){
 		echo '<div class="col-md-12 anim" id="cat_topheader"><span class="post_tile">';
 		echo $post["post_title"].'</span><span class="author_tile">';
 		// $author = get_the_author($post["ID"]);
-		echo 'by ' . get_the_author_meta('display_name', $post["post_author"]) . ' &bull; ' . get_the_time('F jS, Y') . '</span><span class="tags_tile"><ul class="tags_area">';
+		echo 'by ' . get_the_author_meta('display_name', $post["post_author"]) . ' &bull; ' . get_post_time('F jS, Y', false, $post["ID"]) . '</span><span class="tags_tile"><ul class="tags_area">';
 		$tags = wp_get_post_tags($post["ID"]);
 		// echo var_dump($tags);
 
