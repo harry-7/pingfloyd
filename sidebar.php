@@ -15,42 +15,20 @@
 
 </ul>
 <hr />
+<?php
+$popular_posts = wp_get_recent_posts();
+?>
 <h2 class="sidebar_title">Popular Articles</h2>
 <ul id="popular_articles_area">
-<li class="article anim">
-	<span class="article_title">How it all Started</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">This is the end</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">Book Review: 1984</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">The unassuming integer</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">The pretentious movie review</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">Another awesome article name</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
-
-<li class="article anim">
-	<span class="article_title">Another awesome article</span>
-	<span class="article_desc">Posted on July 29th, 2015 by mrinaldhar</span>
-</li>
+<?php
+foreach( $popular_posts as $post ){
+		echo '<a href="' . get_permalink($post["ID"]) . '">';
+		echo '<li class="article anim"><span class="article_title">';
+		echo $post["post_title"].'</span><span class="article_desc">';
+		echo 'Posted on ' . get_the_time('F jS, Y', $post["ID"]) . ' by ' . get_the_author($post["ID"]) . '';
+		echo '</span></li></a>';
+	}
+	?>
 </ul>
 
 </div>
