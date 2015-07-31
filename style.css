@@ -3,14 +3,15 @@ Theme Name: Ping Floyd
 Theme URI: http://ping.iiit.ac.in
 Author: Mrinal Dhar
 Author URI: http://mrinaldhar.com
-Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Description: The PingFloyd is more than a theme. It represents a whole new introduction to a college magazine. It represents the changing dynamic of website design. It's represents a funny name. :D
 Version: 1.0
 License: CC BY - Attribution, version 3.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+License URI: https://creativecommons.org/licenses/by/3.0/legalcode
+Tags: responsive, modern, flat, clean, elegant
 Text Domain: ping
 
-A small message
+May the force be with you. 
+
 */
 
 @font-face {
@@ -201,6 +202,12 @@ body {
 	margin-bottom: 20px;
 	line-height: 1.5em;
 }
+#content p h3 {
+	font-weight: normal;
+	font-size: 2em;
+	margin-bottom: 20px;
+	line-height: 2em;
+}
 hr {
 	outline-width: 0px;
 	border: 1px solid black;
@@ -326,6 +333,9 @@ a {
 }
 .tag a:hover {
 	color: white;
+}
+.social_plugins {
+	text-align: center;
 }
 /*#navbar tr td {*/
 

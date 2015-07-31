@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper">
 	<?php get_header(); ?>
 <div id="main">
@@ -34,7 +42,11 @@
 
 <p><?php the_content(__('(more...)')); ?></p>
 <hr /> 
+<div class="social_plugins">
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>&nbsp; <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>&nbsp; <div class="g-plusone" data-size="medium"></div>
 
+</div>
+<hr />
 </div>
 <?php get_sidebar(); ?>
 </div>
@@ -42,4 +54,6 @@
 </div>
 </div>
 </body>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </html>
