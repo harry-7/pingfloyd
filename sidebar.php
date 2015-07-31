@@ -1,22 +1,21 @@
+<?php $tags_array = get_tags( $args ); ?> 
 <div id="sidebar">
 	<h2 class="sidebar_title">Popular Tags</h2>
 <ul class="tags_area">
-<li class="tag anim">Computers</li>
-<li class="tag anim">Programmming</li>
-<li class="tag anim">Sports</li>
-<li class="tag anim">Kalam</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
-<li class="tag anim">Ping!</li>
+<?php 
+	foreach ( $tags_array as $tag ) {
+	$tag_link = get_tag_link( $tag->term_id );
+			
+	echo "<li class='tag anim'><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+	echo "{$tag->name}</a></li>";
+}
+?>
 
 </ul>
 <hr />
 <?php
-$popular_posts = wp_get_recent_posts();
+$args = array( 'numberposts' => '5' );
+$popular_posts = wp_get_recent_posts($args);
 ?>
 <h2 class="sidebar_title">Popular Articles</h2>
 <ul id="popular_articles_area">

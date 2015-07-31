@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Ping! <?php echo wp_title(); ?></title>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bootstrap.css">
+
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body>

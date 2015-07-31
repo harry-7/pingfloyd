@@ -21,6 +21,10 @@
 #content p {
 	font-size: 1em;
 }
+a {
+	text-decoration: none;
+	color: black;	
+}
 </style>
 </head>
 <body>
@@ -32,7 +36,7 @@
 	<hr />
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<h1 class="post_title"><?php the_title(); ?></h1>
+<a href="<?php the_permalink(); ?>"><h1 class="post_title"><?php the_title(); ?></h1></a>
 <h4 class="post_time">Posted on <?php the_time('F jS, Y') ?></h4>
 <p><?php the_content('Continue reading...'); ?></p>
 <hr /> 

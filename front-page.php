@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Ping!</title>
+
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 <style>
@@ -82,7 +83,7 @@ a {
 			<span id="subtitle"><small>1931 - 2015</small></span>
 			<br /><br /><br />
 			<span id="pagetext">
-				We are deeply saddened by the loss of such a great person. <br />We are deeply saddened by the loss of him.<br />We are deeply saddened. 
+				We are deeply saddened by his sudden demise. <br />The world will remember him as an Inventor, a Scientist, a beloved Icon, a President.<br /><br />Dr. Kalam, <i>the</i> teacher. 
 			</span>
 		</td>
 	</tr>

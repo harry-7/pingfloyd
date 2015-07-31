@@ -6,26 +6,29 @@
 
 }
 #cat_topheader {
-	background-color: blue;
+	background-color: darkgreen;
 	font-family: exo;
 	font-size: 2em;
 	color: white;
 	padding: 20px;
 	margin-bottom: 20px;
 	text-shadow: 0 0 1px black;
+	box-shadow: 0 0 1px black;
 }
 #page_title {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	font-size: 3.2em;
 }
 .tile {
-	background-color: yellow;
+	background-color: darkred;
 	padding: 20px;
 	font-family: exo;
 	font-size: 1.3em;
 	color: white;
 	text-shadow: 0 0 2px black;
 	opacity: 0.7;
+	box-shadow: 0 0 1px black;
 
 	padding: 10px;
 	/*border: 1px solid black;*/
@@ -39,14 +42,14 @@
 	display: block;
 	font-family: gotham;
 	text-transform: uppercase;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 .author_tile {
 	display: block;
 	font-family: gotham;
 
 	color: rgba(255,255,255,1);
-	font-size: 0.8em;
+	font-size: 0.6em;
 }
 .tags_area {
 	font-size: 0.8em;
@@ -61,10 +64,10 @@
 	font-size: 0.6em;
 }
 #cat_topheader .tags_tile {
-	font-size: 0.5em;
+	font-size: 0.6em;
 }
 #cat_topheader .post_tile {
-
+font-size: 1.1em;
 }
 #cat_topheader .author_tile {
 	font-size: 0.7em;
@@ -75,4 +78,16 @@ a:hover {
 #searchbar {
 	/*border-collapse: separate;*/
 	border-spacing: 10px 10px;
+}
+#cat_topheader a {
+	color: white;
+}
+.tag a {
+	color: white;
+}
+.tag:hover {
+background-color: transparent;
+}
+.category_tag {
+	padding: 7px;
 }

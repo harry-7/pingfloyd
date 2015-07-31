@@ -172,7 +172,7 @@ body {
 	font-family: gotham;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 3.0em;
+	font-size: 3.2em;
 	padding-bottom: 0px;
 	margin-bottom: 10px;
 }
@@ -186,9 +186,10 @@ body {
 }
 #content p {
 	font-family: freight;
-	font-size: 1.2em;
-	line-height: 1.4em;
+	font-size: 1.3em;
+	line-height: 1.3em;
 	text-align: justify;
+	margin-bottom: 20px;
 	/*width: 100%;*/
 	 /*See if you can change letter height*/
 	/*text-decoration: italics;*/
@@ -196,7 +197,9 @@ body {
 }
 #content p strong {
 	font-weight: normal;
-	font-size: 1.2em;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	line-height: 1.5em;
 }
 hr {
 	outline-width: 0px;
@@ -212,7 +215,7 @@ hr {
 #sidebar {
 	position: fixed;
 	right: 0%;
-	width: 25%;
+	width: 26%;
 	overflow: hidden;
 	/*border-left: 1px solid black;*/
 	height: 100%;
@@ -220,6 +223,7 @@ hr {
 #sidebar h2 {
 	font-weight: normal;
 	font-size: 1.5em;
+
 }
 a {
 	text-decoration: none;
@@ -229,13 +233,15 @@ a {
 
 }
 #page_title {
-	font-size: 3em;
+	font-size: 3.2em;
 	text-transform: uppercase;
 	font-family: gotham;
 }
 #sidebar .sidebar_title {
 	font-family: gotham;
-	font-size: 1.3em;
+	font-size: 1.6em;
+	color: rgba(0,0,0,0.7);
+	margin-bottom: 20px;
 }
 .tags_area {
 	text-align: right;
@@ -251,7 +257,6 @@ a {
 }
 .tag {
 	display: inline-block;
-	padding: 7px;
 	margin-left: 5px;
 	margin-right: 5px;
 	margin: 5px;
@@ -259,6 +264,7 @@ a {
 	font-size: 0.8em;
 	border: 2px solid black;
 	border-radius: 5px;
+	padding: 0px;
 }
 .tag:hover {
 	background-color: rgba(0,0,0,0.8);
@@ -281,12 +287,12 @@ width: 100%;
 #popular_articles_area .article .article_title{
 	display: block;
 	font-family: exo;
-
+	font-size: 1.1em;
 }
 #popular_articles_area .article .article_desc {
 	display: block;
 	font-family: exo;
-	font-size: 0.7em;
+	font-size: 0.8em;
 
 }
 #popular_articles_area .article:hover {
@@ -303,9 +309,23 @@ width: 100%;
 }
 a:hover {
 	text-decoration: none;
+
 }
 #sidebar a {
 	color: black;
+}
+a {
+	color: black;
+}
+.tag a {
+	display: block;
+	padding: 7px;
+}
+#sidebar .tag a:hover {
+	color: white;
+}
+.tag a:hover {
+	color: white;
 }
 /*#navbar tr td {*/
 
