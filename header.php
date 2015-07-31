@@ -18,22 +18,18 @@
 		<td width="50%">
 			<table id="navbar" width="100%" align="center">
 				<tr>
-					<a href="<?php echo esc_url( get_category_link( $news_and_thought ) ); ?>">
-						<td width="25%" class="anim">
-						News &amp; Thought
-						</td></a>
-					<a href="<?php echo esc_url( get_category_link( $campus_buzz ) ); ?>">
-						<td width="25%" class="anim">
-						Campus Buzz</a>
-						</td></a>
-					<a href="<?php echo esc_url( get_category_link( $creativity_wall ) ); ?>">
-						<td width="25%" class="anim">
-						Creativity Wall</a>
-						</td></a>
-					<a href="<?php echo esc_url( get_category_link( $fun_stuff ) );  ?>">
-						<td width="25%" class="anim">
-						Fun Stuff</a>
-						</td></a>
+					<td width="25%">
+					<a href="<?php echo esc_url( get_category_link( $news_and_thought ) ); ?>" class="anim">News &amp; Thought</a>
+					</td>
+					<td width="25%">
+					<a href="<?php echo esc_url( get_category_link( $campus_buzz ) ); ?>" class="anim">Campus Buzz</a>
+					</td>
+					<td width="25%">
+					<a href="<?php echo esc_url( get_category_link( $creativity_wall ) ); ?>" class="anim">Creativity Wall</a>
+					</td>
+					<td width="25%">
+					<a href="<?php echo esc_url( get_category_link( $fun_stuff ) );  ?>" class="anim">Fun Stuff</a>
+					</td>
 				</tr>
 			</table>
 		</td>
