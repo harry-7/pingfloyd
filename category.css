@@ -1,0 +1,78 @@
+.container {
+	width: 80%;
+	margin-left: 10%;
+}
+.col-md-3 {
+
+}
+#cat_topheader {
+	background-color: blue;
+	font-family: exo;
+	font-size: 2em;
+	color: white;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-shadow: 0 0 1px black;
+}
+#page_title {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.tile {
+	background-color: yellow;
+	padding: 20px;
+	font-family: exo;
+	font-size: 1.3em;
+	color: white;
+	text-shadow: 0 0 2px black;
+	opacity: 0.7;
+
+	padding: 10px;
+	/*border: 1px solid black;*/
+	/*box-shadow: 0 0 3px black;*/
+}
+.tile:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.post_tile {
+	display: block;
+	font-family: gotham;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+.author_tile {
+	display: block;
+	font-family: gotham;
+
+	color: rgba(255,255,255,1);
+	font-size: 0.8em;
+}
+.tags_area {
+	font-size: 0.8em;
+}
+.tag {
+	border: 1px solid white;
+
+}
+.tags_tile {
+	position: absolute;
+	bottom: 20px;
+	font-size: 0.6em;
+}
+#cat_topheader .tags_tile {
+	font-size: 0.5em;
+}
+#cat_topheader .post_tile {
+
+}
+#cat_topheader .author_tile {
+	font-size: 0.7em;
+}
+a:hover {
+	text-decoration: none;
+}
+#searchbar {
+	/*border-collapse: separate;*/
+	border-spacing: 10px 10px;
+}
