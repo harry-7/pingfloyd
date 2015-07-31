@@ -23,7 +23,7 @@ $args = array( 'numberposts' => '1', 'category' => get_cat_ID(single_cat_title('
 // var_dump($this_category);
 $latest_post = wp_get_recent_posts($args);
 	
-	$colors_main = ["#B71C1C", "#880E4F", "#4A148C", "#0D47A1", "#006064", "#004D40", "#33691E", "#3E2723"];
+	$colors_main = Array("#B71C1C", "#880E4F", "#4A148C", "#0D47A1", "#006064", "#004D40", "#33691E", "#3E2723");
 	$color = $colors_main[rand(0, 7)];
 
 foreach( $latest_post as $post ){
