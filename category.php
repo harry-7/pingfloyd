@@ -114,44 +114,13 @@ a {
 
 	<div class="col-md-12">
 		<div class="row">
-			<div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="col-md-4 tile"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile">by <?php the_author(); ?></span><span class="tags_tile">
 				Computers &bull; Sports &bull; Techno
 			</span>
 			</div>
-			<div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div><div class="col-md-4 tile"><span class="post_tile">How it all started</span><span class="author_tile">Mrinal Dhar</span><span class="tags_tile">
-				Computers &bull; Sports &bull; Techno
-			</span>
-			</div>
+			<?php endwhile; else: ?>
+			<h4><?php _e('Sorry, couldn\'t find any posts for this category'); ?></h4><?php endif; ?>
 		</div>
 	</div>
 
