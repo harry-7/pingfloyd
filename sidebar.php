@@ -1,4 +1,6 @@
-<?php $tags_array = get_tags( $args ); ?> 
+<?php
+$args = array( 'number' => '10', 'orderby' => 'count', 'hide_empty' => false );
+$tags_array = get_tags( $args ); ?> 
 <div id="sidebar">
 	<h2 class="sidebar_title">Popular Tags</h2>
 <ul class="tags_area">

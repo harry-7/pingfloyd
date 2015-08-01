@@ -39,7 +39,7 @@
 			</div>
 		</a>
 			<?php endwhile; else: ?>
-			<h4><?php _e('Sorry, couldn\'t find any posts for this category'); ?></h4><?php endif; ?>
+			<h4><?php _e('Sorry, couldn\'t find any posts for this tag.'); ?></h4><?php endif; ?>
 		</div>
 	</div>
 
