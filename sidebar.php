@@ -1,5 +1,5 @@
 <?php
-$args = array( 'number' => '10', 'orderby' => 'count', 'hide_empty' => false );
+$args = array( 'number' => '15', 'orderby' => 'count', 'order' => 'desc' );
 $tags_array = get_tags( $args ); ?> 
 <div id="sidebar">
 	<h2 class="sidebar_title">Popular Tags</h2>
