@@ -337,6 +337,13 @@ a {
 .social_plugins {
 	text-align: center;
 }
+.footer {
+	font-family: exo;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
 /*#navbar tr td {*/
 
 /*}*/
