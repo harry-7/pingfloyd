@@ -88,6 +88,8 @@ a {
 		</td>
 	</tr>
 </table>
+
+
 </body>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.js"></script>

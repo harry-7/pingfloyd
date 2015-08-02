@@ -22,7 +22,15 @@
 	?>
 	<div class="col-md-12">
 		<div class="row">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php 
+$tag_name = single_tag_title('', false);
+global $wp_query;
+$original_query = $wp_query;
+$wp_query = null;
+// var_dump($tagname);
+$args = Array('posts_per_page'=> -1, 'tag'=> $tag_name);
+$wp_query = new WP_Query( $args );
+			if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile">
 				<?php
 		$tags = get_the_tags();
@@ -39,7 +47,11 @@
 			</div>
 		</a>
 			<?php endwhile; else: ?>
-			<h4><?php _e('Sorry, couldn\'t find any posts for this tag.'); ?></h4><?php endif; ?>
+			<h4><?php _e('Sorry, couldn\'t find any posts for this tag.'); ?></h4><?php endif; 
+			$wp_query = null;
+$wp_query = $original_query;
+wp_reset_postdata();
+?>
 		</div>
 	</div>
 
@@ -47,6 +59,8 @@
 
 
 </div>
+<?php get_footer(); ?>
+
 <div id="delimiter">
 </div>
 </div>

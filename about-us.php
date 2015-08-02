@@ -66,6 +66,8 @@ a {
 </p>
 </div>
 <?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
 </div>
 <div id="delimiter">
 </div>

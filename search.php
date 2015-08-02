@@ -27,6 +27,10 @@ a {
 	text-decoration: none;
 	color: black;	
 }
+#content img {
+	display: none;
+
+}
 </style>
 </head>
 <body>
@@ -46,6 +50,8 @@ a {
 <p><?php _e('Oops! Looks like there are no posts matching that criteria. '); ?></p><?php endif; ?>
 </div>
 <?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
 </div>
 <div id="delimiter">
 </div>

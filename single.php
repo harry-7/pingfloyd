@@ -46,8 +46,9 @@
 <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>&nbsp; <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>&nbsp; <div class="g-plusone" data-size="medium"></div>
 
 </div>
-<hr />
+<!-- <hr /> -->
 </div>
+<?php get_footer(); ?>
 <?php get_sidebar(); ?>
 </div>
 <div id="delimiter">
