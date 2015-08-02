@@ -343,7 +343,52 @@ a {
 	text-align: center;
 	padding-bottom: 10px;
 }
+#content img {
 
+	height: auto;
+	width: 80%;
+
+}
+#footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+
+	border-top: 3px solid black;
+	/*box-shadow: 0 0 1px black;*/
+	background-color: rgba(0,0,0,0.8);
+	text-align: center;
+	
+	text-transform: uppercase;
+	/*color: rgba(255,255,255,0.8);*/
+}
+#footer table tr td {
+	color: rgba(255,255,255,0.8);
+font-family: exo;
+	font-size: 0.7em;
+	text-align: center;
+}
+#footer table tr td a:hover {
+	background-color: rgba(255,255,255,0.9);
+
+	color: rgba(0,0,0,0.8);
+
+	cursor: pointer;
+}
+#footer table tr td a {
+	/*color: rgba(0,0,0,0.8);*/
+	color: rgba(255,255,255,0.8);
+
+		padding-bottom: 5px;
+	padding-top: 5px;
+	display: block;
+}
+#content {
+	padding-bottom: 100px;
+}
+.container {
+	padding-bottom: 100px;
+}
 /*#navbar tr td {*/
 
 /*}*/
