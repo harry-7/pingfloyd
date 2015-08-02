@@ -71,7 +71,7 @@ wp_reset_postdata();
 	var width_bigtile = $('#cat_topheader').width();
 
 	// console.log(width);
-	$('.col-md-4').css({height: width_smalltile/2});
+	$('.col-md-4').css({height: width_smalltile/1.5});
 	$('#cat_topheader').css({height: width_bigtile/4});
 
 	</script>
