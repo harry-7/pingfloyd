@@ -1,6 +1,6 @@
 <?php 
 // Get the ID of a given category
-    $news_and_thought = get_cat_ID( 'News &amp; Thought' );
+    $news_and_thought = get_cat_ID( 'News and Thought' );
     $campus_buzz = get_cat_ID( 'Campus Buzz' );
     $fun_stuff = get_cat_ID( 'Fun Stuff' );
     $creativity_wall = get_cat_ID( 'Creativity Wall' );
