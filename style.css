@@ -344,9 +344,8 @@ a {
 	padding-bottom: 10px;
 }
 #content img {
-
 	height: auto;
-	width: 80%;
+	max-width: 80%;
 
 }
 #footer {
