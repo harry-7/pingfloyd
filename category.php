@@ -97,7 +97,7 @@ wp_reset_postdata();
 
 	// console.log(width);
 	$('.col-md-4').css({height: width_smalltile/1.5});
-	$('#cat_topheader').css({height: width_bigtile/4});
+	$('#cat_topheader').css({height: $(window).height()/2.5});
 
 	</script>
 </html>
