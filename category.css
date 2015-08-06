@@ -5,6 +5,9 @@
 .col-md-3 {
 
 }
+.col-md-12 {
+
+}
 #cat_topheader {
 	/*background-color: darkgreen;*/
 	/*font-family: exo;*/
@@ -15,6 +18,8 @@
 	margin-bottom: 5px;
 	/*text-shadow: 0 0 1px black;*/
 	color: black;
+			 background-size: cover; 
+	 background-position: fixed;
 	/*box-shadow: 0 0 1px black;*/
 
 	border: 3px solid rgba(0,0,0,0.9);
@@ -35,7 +40,8 @@
 	opacity: 0.8;
 	/*box-shadow: 0 0 1px black;*/
 	border: 2px solid rgba(0,0,0,0.9);
-
+	 background-size: cover; 
+	 background-position: fixed;
 	padding: 10px;
 	/*border: 1px solid black;*/
 	/*box-shadow: 0 0 3px black;*/
@@ -53,20 +59,30 @@
 	display: block;
 	font-family: gotham;
 	text-transform: uppercase;
-	color: black;
-	font-size: 0.8em;
+/*color:white;*/
+	font-size: 0.9em;
 }
 .tile .author_tile {
 	display: block;
 	font-family: gotham;
 	/*color: black;*/
-	color: rgba(0,0,0,0.5);
-	font-size: 0.6em;
+	font-size: 0.7em;
+}
+.white {
+	color: rgba(255,255,255,1);
+
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+}
+.gray {
+	color: rgba(255,255,255,0.8);
+text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+
 }
 .tags_area {
 	font-size: 0.8em;
 }
 .tag {
+	background-color: rgba(255,255,255,0.9);
 	border: 2px solid black;
 }
 .tag:hover {
@@ -87,7 +103,7 @@ font-size: 1.0em;
 }
 #cat_topheader .author_tile {
 	font-size: 0.7em;
-	color: rgba(0,0,0,0.5);
+	/*color: rgba(0,0,0,0.5);*/
 }
 a:hover {
 	text-decoration: none;

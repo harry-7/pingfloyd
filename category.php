@@ -25,14 +25,28 @@ $latest_post = wp_get_recent_posts($args);
 	
 	// $colors_main = Array("#B71C1C", "#880E4F", "#4A148C", "#0D47A1", "#006064", "#004D40", "#33691E", "#3E2723");
 	// $color = $colors_main[rand(0, 7)];
-
+$featured_post = 0;
 foreach( $latest_post as $post ){
+		$tile_img = get_post_meta( $post["ID"], 'tile-img', true ); 
 		echo '<a href="' . get_permalink($post["ID"]) . '">';
-		echo '<div class="col-md-12 anim" id="cat_topheader"><span class="post_tile">';
+		$featured_post = $post["ID"];
+		if ($tile_img != '') {
+			echo '<div class="col-md-12 anim" id="cat_topheader" style="background-image: url(\'' . $tile_img . '\');">';
+	echo '<span class="post_tile white">';
+		echo $post["post_title"].'</span><span class="author_tile gray">';
+		// $author = get_the_author($post["ID"]);
+		echo 'by ' . get_the_author_meta('display_name', $post["post_author"]) . ' &bull; ' . get_post_time('F jS, Y', false, $post["ID"]) . '</span><span class="tags_tile"><ul class="tags_area">';
+	
+		}
+		else {
+			echo '<div class="col-md-12 anim" id="cat_topheader">';
+		echo '<span class="post_tile">';
 		echo $post["post_title"].'</span><span class="author_tile">';
 		// $author = get_the_author($post["ID"]);
 		echo 'by ' . get_the_author_meta('display_name', $post["post_author"]) . ' &bull; ' . get_post_time('F jS, Y', false, $post["ID"]) . '</span><span class="tags_tile"><ul class="tags_area">';
+	}
 		$tags = wp_get_post_tags($post["ID"]);
+
 		// echo var_dump($tags);
 
 		foreach ( $tags as $tag ) {
@@ -51,12 +65,18 @@ $category_name = single_cat_title('', false);
 global $wp_query;
 $original_query = $wp_query;
 $wp_query = null;
-$args = Array('posts_per_page'=> -1, 'category_name'=> $category_name);
+$args = Array('posts_per_page'=> -1, 'category_name'=> $category_name, 'post__not_in' => array($featured_post));
 
 $wp_query = new WP_Query( $args );
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile">
+			<?php $tile_img = get_post_meta( get_the_ID(), 'tile-img', true ); 
+			if ($tile_img != '') : ?>
+			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim" style="background-image: url('<?php echo $tile_img; ?>');"><span class="post_tile white"><?php the_title(); ?></span><span class="author_tile gray">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile white">
+				<?php else : ?>
+			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile" style="color: rgba(0,0,0,0.5);">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile">
+
 				<?php
+				endif;
 		$tags = get_the_tags();
 				// $tags = get_the_tags();
 		// echo var_dump($tags);
