@@ -17,9 +17,6 @@
 
 <div class="container">
 	<div id="page_title" class="col-md-12">#<?php single_tag_title(); ?></div>
-	<?php 
-	// $colors_main = ["#B71C1C", "#880E4F", "#4A148C", "#0D47A1", "#006064", "#004D40", "#33691E", "#3E2723"];
-	?>
 	<div class="col-md-12">
 		<div class="row">
 			<?php 
@@ -31,7 +28,15 @@ $wp_query = null;
 $args = Array('posts_per_page'=> -1, 'tag'=> $tag_name);
 $wp_query = new WP_Query( $args );
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile">
+			<?php $tile_img = get_post_meta( get_the_ID(), 'tile-img', true ); 
+			if ($tile_img != '') : ?>
+			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim" style="background-image: url('<?php echo $tile_img; ?>');"><span class="post_tile white"><?php the_title(); ?></span><span class="author_tile gray">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile white">
+				<?php else : ?>
+			<a href="<?php echo the_permalink() ?>"><div class="col-md-4 tile anim"><span class="post_tile"><?php the_title(); ?></span><span class="author_tile" style="color: rgba(0,0,0,0.5);">by <?php the_author(); ?> &bull; <?php the_time('F jS, Y') ?></span><span class="tags_tile">
+
+				<?php
+				endif;
+				?>
 				<?php
 		$tags = get_the_tags();
 				// $tags = get_the_tags();
