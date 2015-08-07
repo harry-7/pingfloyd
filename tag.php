@@ -25,7 +25,7 @@ global $wp_query;
 $original_query = $wp_query;
 $wp_query = null;
 // var_dump($tagname);
-$args = Array('posts_per_page'=> -1, 'tag'=> $tag_name);
+$args = Array('posts_per_page'=> -1, 'tag_slug__and'=>array($tag_name));
 $wp_query = new WP_Query( $args );
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php $tile_img = get_post_meta( get_the_ID(), 'tile-img', true ); 
