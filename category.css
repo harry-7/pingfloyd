@@ -19,7 +19,7 @@
 	/*text-shadow: 0 0 1px black;*/
 	color: black;
 			 background-size: cover; 
-	 background-position: fixed;
+	 background-attachment: fixed;
 	/*box-shadow: 0 0 1px black;*/
 
 	border: 3px solid rgba(0,0,0,0.9);
@@ -41,7 +41,7 @@
 	/*box-shadow: 0 0 1px black;*/
 	border: 2px solid rgba(0,0,0,0.9);
 	 background-size: cover; 
-	 background-position: fixed;
+	 background-attachment: fixed;
 	padding: 10px;
 	/*border: 1px solid black;*/
 	/*box-shadow: 0 0 3px black;*/
