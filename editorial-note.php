@@ -1,4 +1,4 @@
-<?php /* Template Name: SearchResults */ ?>
+<?php /* Template Name: EditorialNote */ ?>
 
 <html>
 <head>
@@ -21,15 +21,11 @@
 	font-size: 0.8em;
 }
 #content p {
-	font-size: 1em;
+	font-size: 1.3em;
 }
 a {
 	text-decoration: none;
 	color: black;	
-}
-#content img {
-	display: none;
-
 }
 </style>
 </head>
@@ -38,16 +34,12 @@ a {
 	<?php get_header(); ?>
 <div id="main">
 <div id="content">
-	<h1 id="page_title">SEARCH RESULTS</h1>
+	<h1 id="page_title">Editorial Note</h1>
 	<hr />
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-<a href="<?php the_permalink(); ?>"><h1 class="post_title"><?php the_title(); ?></h1></a>
-<h4 class="post_time">Posted on <?php the_time('F jS, Y') ?></h4>
-<p><?php the_content('Continue reading...'); ?></p>
-<hr /> 
-<?php endwhile; else: ?>
-<p><?php _e('Oops! Looks like there are no posts matching that criteria. '); ?></p><?php endif; ?>
+	<p>
+	<br />
+	Coming Soon. 
+</p>
 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -360,6 +360,7 @@ a {
 	
 	text-transform: uppercase;
 	/*color: rgba(255,255,255,0.8);*/
+	z-index: 999;
 }
 #footer table tr td {
 	color: rgba(255,255,255,0.8);
@@ -387,6 +388,12 @@ font-family: exo;
 }
 .container {
 	padding-bottom: 100px;
+}
+#content a {
+	text-decoration: underline;
+}
+#content .tag a {
+	text-decoration: none;
 }
 /*#navbar tr td {*/
 

@@ -119,5 +119,12 @@ wp_reset_postdata();
 	$('.col-md-4').css({height: width_smalltile/1.5});
 	$('#cat_topheader').css({height: $(window).height()/2.5});
 
+var original_text;
+$('.coming-soon').hover(function() {
+	original_text = $(this).text();
+	$(this).text('Coming Soon');
+}, function() {
+	$(this).text(original_text);
+});
 	</script>
 </html>

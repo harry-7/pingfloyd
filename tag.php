@@ -80,4 +80,13 @@ wp_reset_postdata();
 	$('#cat_topheader').css({height: width_bigtile/4});
 
 	</script>
+	<script>
+var original_text;
+$('.coming-soon').hover(function() {
+	original_text = $(this).text();
+	$(this).text('Coming Soon');
+}, function() {
+	$(this).text(original_text);
+});
+</script>
 </html>

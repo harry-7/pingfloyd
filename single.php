@@ -6,6 +6,13 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bootstrap.css">
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+<style>
+.article_header {
+	background-size: cover; 
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+</style>
 </head>
 <body>
 	<div id="fb-root"></div>
@@ -18,10 +25,19 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper">
 	<?php get_header(); ?>
+<?php 
+$post_id = get_the_ID(); 
+$tile_img = get_post_meta( $post_id, 'tile-img', true ); 
+ ?>
+
 <div id="main">
 <div id="content">
 
+
 <?php the_post(); ?>
+
+<!-- <div class="article_header" style="background: url('<?php echo $tile_img; ?>'); background-size: cover; background-position: fixed; background-repeat: no-repeat;"> -->
+
 <h1 class="post_title"><?php the_title(); ?></h1>
 
 <h4 class="post_time">Posted on <?php the_time('F jS, Y') ?> by <?php the_author(); ?> </h4>
@@ -38,6 +54,7 @@
 }
 ?>
 </ul>
+<!-- </div> -->
 <hr />
 
 <p><?php the_content(__('(more...)')); ?></p>
@@ -55,6 +72,17 @@
 </div>
 </div>
 </body>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
+
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>
+var original_text;
+$('.coming-soon').hover(function() {
+	original_text = $(this).text();
+	$(this).text('Coming Soon');
+}, function() {
+	$(this).text(original_text);
+});
+</script>
 </html>
