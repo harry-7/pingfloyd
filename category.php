@@ -19,7 +19,7 @@
 	<div id="page_title" class="col-md-12"><?php single_cat_title(); ?></div>
 <?php
 $this_category = get_the_category();
-$args = array( 'numberposts' => '1', 'category' => get_cat_ID(single_cat_title('', false)) );
+$args = array( 'numberposts' => '1', 'category' => get_cat_ID(single_cat_title('', false)), 'post_status' => array('publish') );
 // var_dump($this_category);
 $latest_post = wp_get_recent_posts($args);
 	
@@ -65,7 +65,7 @@ $category_name = single_cat_title('', false);
 global $wp_query;
 $original_query = $wp_query;
 $wp_query = null;
-$args = Array('posts_per_page'=> -1, 'category_name'=> $category_name, 'post__not_in' => array($featured_post));
+$args = Array('posts_per_page'=> -1, 'category_name'=> $category_name, 'post__not_in' => array($featured_post), 'post_status' => array('publish') );
 
 $wp_query = new WP_Query( $args );
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
