@@ -16,7 +16,7 @@ $tags_array = get_tags( $args ); ?>
 </ul>
 <hr />
 <?php
-$args = array( 'numberposts' => '5' );
+$args = array( 'numberposts' => '5',  'post_status' => array('publish') );
 $popular_posts = wp_get_recent_posts($args);
 ?>
 <h2 class="sidebar_title">Popular Articles</h2>
