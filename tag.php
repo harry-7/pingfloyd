@@ -88,5 +88,8 @@ $('.coming-soon').hover(function() {
 }, function() {
 	$(this).text(original_text);
 });
+window.setTimeout(function() {
+$('.container').animate({opacity:1}, 300);
+}, 600);
 </script>
 </html>

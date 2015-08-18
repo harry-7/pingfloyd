@@ -1,6 +1,7 @@
 .container {
 	width: 80%;
 	margin-left: 10%;
+	opacity: 0;
 }
 .col-md-3 {
 
