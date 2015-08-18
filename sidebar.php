@@ -26,7 +26,7 @@ foreach( $popular_posts as $post ){
 		echo '<a href="' . get_permalink($post["ID"]) . '">';
 		echo '<li class="article anim"><span class="article_title">';
 		echo $post["post_title"].'</span><span class="article_desc">';
-		echo 'Posted on ' . get_the_time('F jS, Y', $post["ID"]) . ' by ' . get_the_author($post["ID"]) . '';
+		echo 'Posted on ' . get_the_time('F jS, Y', $post["ID"]) . ' by ' . get_the_author_meta('user_login', $post["post_author"]) . '';
 		echo '</span></li></a>';
 	}
 	?>
