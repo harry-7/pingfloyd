@@ -10,7 +10,7 @@
 <div id="wrapper">
 	<?php get_header(); ?>
 <div id="main">
-<div id="content">aa
+<div id="content">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <h1 class="post_title"><?php the_title(); ?></h1>
 <h4 class="post_time">Posted on <?php the_time('F jS, Y') ?> by <?php the_author(); ?> </h4>
