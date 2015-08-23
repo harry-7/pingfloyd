@@ -4,7 +4,6 @@
 <title>Ping!</title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-
 <style>
 body, html {
 	font-family: myriadl;
