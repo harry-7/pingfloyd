@@ -448,7 +448,16 @@ padding: 10px;
 }
 #comment_form {
 	width: 100%;
-	text-align: center;
+
+}
+#comment_form #commenter_name {
+width: 30%;
+display: inline-block;
+margin-bottom: 10px;
+outline-width: 0px;
+/*border: 0px;*/
+border: 2px solid black;
+padding: 10px;
 }
 #comment_form #submit {
 	background-color: white;
