@@ -4,9 +4,9 @@
 	<hr />
 	<table id="comments_table">
 		<?php if ( have_comments() ) : 
-		$comments = get_comments();
-		foreach($comments as $comment) : 
-			if ($comment->comment_approved == 1) :?>
+			while ( have_comments() ):
+				the_comment();
+		?>
 		<tr>
 			<td>
 				<span class="comment_text">
@@ -17,11 +17,11 @@
 				</span>
 			</td>
 		</tr>
-<?php endif; endforeach; endif; // end have_comments() ?>
+<?php endwhile; endif; // end have_comments() ?>
 	
-
 		<tr>
 			<td>
+				<?php if (comments_open()): ?>
 				<form id="comment_form" action="<?php echo esc_url( home_url( '/wp-comments-post.php' ) ); ?>" method="POST">
 					<textarea id="comment" name="comment" aria-describedby="form-allowed-tags" aria-required="true" required="required" placeholder="What are your views on this?"></textarea>
 						<input type="text" name="author" id="commenter_name" placeholder="Your name" />
@@ -31,6 +31,9 @@
 
 
 				</form>
+				<?php else: ?>
+				New comments are closed.
+				<?php endif; ?>
 			</td>
 		</tr>
 		<tr>
