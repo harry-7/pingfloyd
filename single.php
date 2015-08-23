@@ -1,5 +1,4 @@
 <?php /* Template Name: Article */ ?>
-
 <html>
 <head>
 <title>Ping!<?php echo wp_title(); ?></title>
@@ -28,6 +27,7 @@
 <?php 
 $post_id = get_the_ID(); 
 $tile_img = get_post_meta( $post_id, 'tile-img', true ); 
+ // echo '<div class="top_image" style="background-image: url(\'' . $tile_img . '\');"></div>';
  ?>
 
 <div id="main">
@@ -64,9 +64,11 @@ $tile_img = get_post_meta( $post_id, 'tile-img', true );
 
 </div>
 <!-- <hr /> -->
+<?php comments_template(); ?> 
 </div>
-<?php get_footer(); ?>
 <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>
 </div>
 <div id="delimiter">
 </div>
