@@ -13,7 +13,7 @@
 					&ldquo; <?php echo $comment->comment_content; ?> &rdquo;
 				</span>
 				<span class="comment_desc">
-					<?php echo ' on ' . get_comment_date() . ' at ' . get_comment_time(); ?>
+					by <?php echo $comment->comment_author . ' on ' . get_comment_date() . ' at ' . get_comment_time(); ?>
 				</span>
 			</td>
 		</tr>
