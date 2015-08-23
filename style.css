@@ -425,6 +425,7 @@ font-family: exo;
 	font-size: 1.2em;
 	display: block;
 	width: 100%;
+	line-height: 1.2em;
 }
 #comments_table tr td .comment_desc {
 	margin-top: 10px;
