@@ -431,6 +431,7 @@ font-family: exo;
 	font-size: 0.9em;
 	display: block;
 	width: 100%;
+	color: rgba(0,0,0,0.5);
 }
 #comments_table tr td {
 	padding-top: 20px;
