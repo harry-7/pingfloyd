@@ -451,7 +451,7 @@ padding: 10px;
 
 }
 #comment_form #commenter_name {
-width: 30%;
+width: 50%;
 display: inline-block;
 margin-bottom: 10px;
 outline-width: 0px;
@@ -462,10 +462,11 @@ padding: 10px;
 #comment_form #submit {
 	background-color: white;
 	font-family: exo;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	outline-width: 0px;
 	border-radius: 3px;
 	padding: 3px;
+	vertical-align: middle;
 	padding-right: 10px;
 	padding-left: 10px;
 	border: 2px solid black;
