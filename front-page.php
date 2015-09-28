@@ -191,11 +191,13 @@ background: #003156;
 				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<li class="anim">
-					<a href="<?php echo the_permalink() ?>">
+				<a href="<?php echo the_permalink() ?>">
+					<li class="anim">
+					
 					<?php the_title(); ?>
-					</a>
 				</li>
+					</a>
+
 				<?php endwhile; endif;
 				$wp_query = null;
 				$wp_query = $original_query;
@@ -218,11 +220,13 @@ background: #003156;
 				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<li class="anim">
 					<a href="<?php echo the_permalink() ?>">
+
+				<li class="anim">
 					<?php the_title(); ?>
-					</a>
 				</li>
+					</a>
+
 				<?php endwhile; endif;
 				$wp_query = null;
 				$wp_query = $original_query;
@@ -245,11 +249,13 @@ background: #003156;
 				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<li class="anim">
 					<a href="<?php echo the_permalink() ?>">
+
+				<li class="anim">
 					<?php the_title(); ?>
-					</a>
 				</li>
+					</a>
+
 				<?php endwhile; endif;
 				$wp_query = null;
 				$wp_query = $original_query;
@@ -272,11 +278,13 @@ background: #003156;
 				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<li class="anim">
 					<a href="<?php echo the_permalink() ?>">
+
+				<li class="anim">
 					<?php the_title(); ?>
-					</a>
 				</li>
+					</a>
+				
 				<?php endwhile; endif;
 				$wp_query = null;
 				$wp_query = $original_query;
