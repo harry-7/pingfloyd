@@ -9,7 +9,7 @@
 <!-- Author: Mrinal Dhar - http://mrinaldhar.com -->
 <html>
 <head>
-<title>All new Ping! - IIIT Hyderabad</title>
+<title>Ping!</title>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <style>
@@ -284,7 +284,7 @@ background: #003156;
 					<?php the_title(); ?>
 				</li>
 					</a>
-				
+
 				<?php endwhile; endif;
 				$wp_query = null;
 				$wp_query = $original_query;
