@@ -19,6 +19,10 @@ May the force be with you.
 	src: url("fonts/myriadl.otf");  
 }
 @font-face {
+	font-family: consolasfont;
+	src: url("fonts/consolas.ttf");  
+}
+@font-face {
 	font-family: gotham;
 	src: url("fonts/gotham.ttf");  
 }
