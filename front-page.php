@@ -19,7 +19,7 @@ body, html {
 	margin: 0 auto;
 	padding: 0px;
 	height: 100%;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,0);
 	overflow: hidden;
 }
 #top_left {
@@ -27,7 +27,7 @@ body, html {
 	position: absolute;
 	width: 50%;
 	height: 50%;
-	color: white;
+	color: black;
 	left: 10px;
 	top: 10px;
 	font-size: 2em;
@@ -38,7 +38,7 @@ body, html {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	max-height: 40%;
+	max-height: 45%;
 	border-collapse: collapse;
 	box-sizing: border-box;
 }
@@ -106,17 +106,6 @@ a {
 .category_article_list li:hover {
 	background-color: rgba(0,0,0,0.5);
 }
-#colorizer {
-position: fixed;
-z-index: 0;
-top: 0;
-left: 0;
-width: 0%;
-text-align: left;
-opacity: 1;
-height: 4px;
-background: #003156;
-}
 #top_logo_main {
 	z-index: 100;
 	width: 50%;
@@ -143,7 +132,56 @@ background: #003156;
 	padding: 5px;
 }
 #searchform {
-	margin-top: 30px;
+	/*margin-top: 30px;*/
+	position: fixed;
+	top: 40px;
+	right: 20px;
+	width: 25%;
+	opacity: 0;
+}
+#colorizer_1 {
+position: fixed;
+z-index: 0;
+top: 0;
+left: 0;
+width: 0%;
+text-align: left;
+opacity: 1;
+height: 4px;
+background: #003156;
+}
+#colorizer_2 {
+position: fixed;
+z-index: 0;
+top: 0;
+left: 25%;
+width: 0%;
+text-align: left;
+opacity: 1;
+height: 4px;
+background: #003156;
+}
+#colorizer_3 {
+position: fixed;
+z-index: 0;
+top: 0;
+left: 50%;
+width: 0%;
+text-align: left;
+opacity: 1;
+height: 4px;
+background: #003156;
+}
+#colorizer_4 {
+position: fixed;
+z-index: 0;
+top: 0;
+left: 75%;
+width: 0%;
+text-align: left;
+opacity: 1;
+height: 4px;
+background: #003156;
 }
 </style>
 
@@ -165,15 +203,21 @@ background: #003156;
 					IIIT-Hyderabad's all new online newsletter
 				</td>
 			</tr>
-			<tr>
-				<td width="100%">
-					<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<input type="text" name="s" id="searchvalue" placeholder="Looking for an article? Search for it here!" />
-
-		</form>
-	</td>
+			<!-- <tr> -->
+				<!-- <td width="100%"> -->
+					
+				<!-- </td> -->
+			<!-- </tr> -->
 		</table>
-<div id="colorizer"></div>
+		<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<input type="text" name="s" id="searchvalue" placeholder="Search for an article!" />
+					</form>
+<!-- <div id="colorizer"></div> -->
+<div id="colorizer_1"></div>
+<div id="colorizer_2"></div>
+<div id="colorizer_3"></div>
+<div id="colorizer_4"></div>
+
 <table id="bottom_nav">
 <tr>
 	<td width="25%" class="red">
@@ -188,7 +232,7 @@ background: #003156;
 				global $wp_query;
 				$original_query = $wp_query;
 				$wp_query = null;
-				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
+				$args = Array('posts_per_page'=> 7, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<a href="<?php echo the_permalink() ?>">
@@ -217,7 +261,7 @@ background: #003156;
 				global $wp_query;
 				$original_query = $wp_query;
 				$wp_query = null;
-				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
+				$args = Array('posts_per_page'=> 7, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<a href="<?php echo the_permalink() ?>">
@@ -246,7 +290,7 @@ background: #003156;
 				global $wp_query;
 				$original_query = $wp_query;
 				$wp_query = null;
-				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
+				$args = Array('posts_per_page'=> 7, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<a href="<?php echo the_permalink() ?>">
@@ -261,6 +305,7 @@ background: #003156;
 				$wp_query = $original_query;
 				wp_reset_postdata();
 				?>
+
 			</ul>
 	</td>
 	<td width="25%" class="green">
@@ -275,7 +320,7 @@ background: #003156;
 				global $wp_query;
 				$original_query = $wp_query;
 				$wp_query = null;
-				$args = Array('posts_per_page'=> 5, 'category_name'=> $category_name, 'post_status' => array('publish') );
+				$args = Array('posts_per_page'=> 7, 'category_name'=> $category_name, 'post_status' => array('publish') );
 				$wp_query = new WP_Query( $args );
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<a href="<?php echo the_permalink() ?>">
@@ -313,13 +358,15 @@ $(document).keypress(function(e) {
 		$('.green').animate({opacity: 1}, 300);
 		window.clearInterval(colorLoop);
  		$('#top_logo_main').animate({opacity: 1}, 300);
-
+ 		$('#top_left').animate({opacity: 0}, 300);
+ 		$('#searchform').animate({opacity: 1}, 300);
+ 		colorizer();
 	}
 });
 $(document).ready(function() {
 	// window.setTimeout(function() {
 		// init();
-		colorLoop = window.setInterval(colorizer, 2000);
+		colorLoop = window.setTimeout(colorizer, 2000);
 	// }, 1000);
 });
 function init() {
@@ -342,60 +389,38 @@ $('#dis').animate({opacity: 1}, 300);
 var color_phase = 1;
 function colorizer() {
 	var bgcolor = 0;
-	if (color_phase == 1) {
 		bgcolor = "#BF360C";
-	}
-	else if (color_phase == 2) {
-		bgcolor = "#283593";
-
-	}
-	else if (color_phase == 3) {
-		bgcolor = "#004D40";
-	}
-	else if (color_phase == 4) {
-		bgcolor = "#2E7D32";
-	}
-	else if (color_phase == 5) {
-		bgcolor = "#FFFFFF";
-	}
- 	else {
- 		$('#top_logo_main').animate({opacity: 1}, 300);
-		window.clearInterval(colorLoop);
-		return;
-	}
-	 	$('#colorizer').css({"background-color": bgcolor});
-
-	setTimeout(function() {
- $("#colorizer").animate({ width: "100%" }, 300);
-}, 400);
- setTimeout(function() {
- 	$("#colorizer").animate({ height: "100%" }, 300, function() {
- 		if (color_phase == 1) {
+		$('#colorizer_1').css({"background-color": bgcolor});
 		$('.red').animate({opacity: 1}, 300);
-	}
-	else if (color_phase == 2) {
-		$('.blue').animate({opacity: 1}, 300);
 
-	}
-	else if (color_phase == 3) {
-		$('.brown').animate({opacity: 1}, 300);
+		 $("#colorizer_1").animate({ width: "25%" }, 300, function() {
+			 	bgcolor = "#283593";
+				$('#colorizer_2').css({"background-color": bgcolor});
+				$('.blue').animate({opacity: 1}, 300);
 
-	}
-	else if (color_phase == 4) {
-		$('.green').animate({opacity: 1}, 300);
-	}
-	color_phase += 1;
+				 $("#colorizer_2").animate({ width: "25%" }, 300, function() {
+					bgcolor = "#004D40";
+					$('#colorizer_3').css({"background-color": bgcolor});
+					$('.brown').animate({opacity: 1}, 300);
 
- 	});
- 	
- }, 800);
- setTimeout(function() {
- 	$('#colorizer').css({"height": "4px"});
- 	$('#colorizer').css({"width": "0%"});
- 	$('body').css({"background-color": bgcolor});
+						 $("#colorizer_3").animate({ width: "25%" }, 300, function() {
+							bgcolor = "#2E7D32";
+							$('#colorizer_4').css({"background-color": bgcolor});
+								$('.green').animate({opacity: 1}, 300);
 
- }, 1200);
+									 $("#colorizer_4").animate({ width: "25%" }, 300, function() {
+									 	bgcolor = "#FFFFFF";
+										window.clearTimeout(colorLoop);
+								 		$('#top_logo_main').animate({opacity: 1}, 300);
+								 		$('#searchform').animate({opacity: 1}, 300);
+								 		$('#top_left').animate({opacity: 0}, 300);
+									 });
 
+								});
+
+						});
+		});
+		
 }
 
 </script>
