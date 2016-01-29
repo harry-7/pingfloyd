@@ -4,6 +4,14 @@
     $campus_buzz = get_cat_ID( 'Campus Buzz' );
     $fun_stuff = get_cat_ID( 'Fun Stuff' );
     $creativity_wall = get_cat_ID( 'Creativity Wall' );
+    function small_title($length) { 
+    	$title = get_the_title();
+
+		if ( strlen($title)> $length ) {
+			$title = substr($title, 0, $length) . "...";
+		}
+		return $title;
+	}
 ?>
 <!doctype html>
 <!-- Author: Mrinal Dhar - http://mrinaldhar.com -->
@@ -38,7 +46,8 @@ body, html {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	max-height: 45%;
+	max-height: 40%;
+	z-index: 999;
 	border-collapse: collapse;
 	box-sizing: border-box;
 }
@@ -237,8 +246,8 @@ background: #003156;
 				if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<a href="<?php echo the_permalink() ?>">
 					<li class="anim">
+					<?php echo small_title(35); ?>
 					
-					<?php the_title(); ?>
 				</li>
 					</a>
 
@@ -267,7 +276,7 @@ background: #003156;
 					<a href="<?php echo the_permalink() ?>">
 
 				<li class="anim">
-					<?php the_title(); ?>
+					<?php echo small_title(35); ?>
 				</li>
 					</a>
 
@@ -296,7 +305,7 @@ background: #003156;
 					<a href="<?php echo the_permalink() ?>">
 
 				<li class="anim">
-					<?php the_title(); ?>
+					<?php echo small_title(35); ?>
 				</li>
 					</a>
 
@@ -326,7 +335,7 @@ background: #003156;
 					<a href="<?php echo the_permalink() ?>">
 
 				<li class="anim">
-					<?php the_title(); ?>
+					<?php echo small_title(35); ?>
 				</li>
 					</a>
 
@@ -367,6 +376,12 @@ $(document).ready(function() {
 	// window.setTimeout(function() {
 		// init();
 		colorLoop = window.setTimeout(colorizer, 2000);
+		// $(document).find('.category_article_list a').each(function (index) {
+		// 	var title = $(this).html().trim();
+		// 	if (title.length > 30) {
+		// 		$(this).html(title.substr(0, 30) + "...");
+		// 	}
+		// });
 	// }, 1000);
 });
 function init() {
